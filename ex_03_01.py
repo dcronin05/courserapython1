@@ -43,4 +43,32 @@ def computepay(hr,
         return hr * rate
 
 
-print(computepay(int(input("Enter hours: ")), float(input("Enter rate: "))))
+def numberloop():
+
+    while True:
+        try:
+            num = int(input("Enter a number: "))
+            break
+        except:
+            print("Not a number.")
+
+    smallest = num
+    largest = num
+
+    while True:
+        
+        try:
+            num = input("Enter a number: ")
+            if num == "done":
+                break
+            elif int(num) < smallest:
+                smallest = int(num)
+            elif int(num) > largest:
+                largest = int(num)
+            
+        except:
+            print("Invalid input")
+
+    print("Maximum is {}\nMinimum is {}".format(largest, smallest))
+
+numberloop()
