@@ -16,4 +16,11 @@ def aMethod():
     print(input())
 
 
-aMethod()
+def score(score = float(input("Enter Score: "))):
+    
+    while not score <= 1.0:
+        print("The score is out of range.")
+        score = float(input("Enter Score: "))
+
+
+score()
